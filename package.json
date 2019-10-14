@@ -2,6 +2,9 @@
   "name": "soniarohani",
   "version": "0.0.1",
   "description": "Put a description here",
+  "engines": {
+    "node": "10.16.3"
+  },
   "main": "build/index.js",
   "peerDependencies": {
     "react": "^15.5.4"
@@ -20,8 +23,7 @@
   "scripts": {
     "test": "jest",
     "start": "nodemon server/index.js",
-    "react-dev": "webpack -d --watch",
-    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+    "react-dev": "webpack -d --watch"
   },
   "jest": {
     "verbose": true,
