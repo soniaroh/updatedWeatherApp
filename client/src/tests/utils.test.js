@@ -1,3 +1,4 @@
+import clouds from '../weatherIcons/clouds.png';
 import {
   getDayName,
   weatherState
@@ -10,7 +11,11 @@ describe('getDayName',() => {
 });
 
 describe('weatherState', () => {
-  it('should return path to proper image according to the weather state', () => {
-    expect(weatherState('Heavy Cloud')).toEqual('../weatherIcons/clouds.png')
+  it('should return proper image according to the weather state', () => {
+    expect(weatherState('Heavy Cloud')).toEqual(clouds)
+  });
+
+  it('should return the default message if weather state doesnt exist', () => {
+    expect(weatherState('good weather')).toEqual('weather state is not valid')
   });
 });

@@ -6,13 +6,16 @@ import {
   weatherState
 } from "./utils/Forecast-utils";
 
+
+
 export const Forecast = props => {
+
   let data = Array.from(props.forecast)
   return (
     <div className={style.data}>
       {data.map((temp, index) => {
         return (
-          <div>
+          <div key={index}>
             {index === 0 ?
               <div className={style.rightSpace}>
                 <div className={style.city}>{props.city}</div>
