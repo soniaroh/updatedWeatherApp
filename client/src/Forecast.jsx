@@ -6,7 +6,7 @@ import {
   weatherState
 } from "./utils/Forecast-utils";
 
-export const Forecast = (props) => {
+export const Forecast = props => {
   let data = Array.from(props.forecast)
   return (
     <div className={style.data}>
@@ -15,7 +15,7 @@ export const Forecast = (props) => {
           <div>
             {index === 0 ?
               <div className={style.rightSpace}>
-                <div>{props.city}</div>
+                <div className={style.city}>{props.city}</div>
                 <div className={style.today}>{getDayName(temp.applicable_date)}</div>
                 <div className={style.center}>
                   <div><img src={weatherState(temp.weather_state_name)} className={style.image} /></div>

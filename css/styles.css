@@ -46,7 +46,7 @@ h2 {
 .data {
   margin-top: 24px;
   text-align: center;
-  display: flex;
+  display: inline-flex;
   align-items: stretch; 
 }
 
@@ -81,4 +81,8 @@ h2 {
   right: 50%;
   top: 50%;
   position: absolute;
+}
+
+.city {
+  font-size: 32px;
 }
