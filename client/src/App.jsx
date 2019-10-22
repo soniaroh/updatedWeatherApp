@@ -1,7 +1,7 @@
 import React from 'react';
 const fetch = require('node-fetch');
 
-import * as cx from 'classnames';
+import cx from 'classnames';
 import * as style from '../../css/styles.css'
 
 import { Forecast } from './Forecast.jsx';

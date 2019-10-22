@@ -19,6 +19,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
     "style-loader": "^1.0.0"
   },
   "scripts": {
@@ -29,6 +31,12 @@
   },
   "jest": {
     "verbose": true,
+    "clearMocks": true,
+    "collectCoverage": true,
+    "setupTestFrameworkScriptFile": "/Users/sonia/Documents/SoniaRohaniApp/jestsetup.js",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
     "setupFiles": [
       "./jestsetup.js"
     ],
@@ -45,11 +53,16 @@
     "email": "rrsonia10@gmail.com"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-flow": "^7.0.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.24.1",
+    "babel-eslint": "^10.0.3",
     "babel-jest": "^23.6.0",
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-polyfill": "^6.26.0",

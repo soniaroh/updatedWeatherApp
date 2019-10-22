@@ -3,7 +3,8 @@ module.exports = {
         "browser": true,
         "commonjs": true,
         "es6": true,
-        "jest": true
+        "jest": true,
+        "node": true
     },
     "extends": ["eslint:recommended", "plugin:react/recommended"],
     "globals": {
@@ -20,7 +21,9 @@ module.exports = {
     "plugins": [
         "react"
     ],
+    "parser": "babel-eslint",
     "rules": {
-        "react/jsx-uses-vars": [2]
+        "react/jsx-uses-vars": [2],
+        "react/prop-types": 0
     }
 };

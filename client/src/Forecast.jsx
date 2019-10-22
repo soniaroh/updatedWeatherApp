@@ -6,10 +6,7 @@ import {
   weatherState
 } from "./utils/Forecast-utils";
 
-
-
 export const Forecast = props => {
-
   let data = Array.from(props.forecast)
   return (
     <div className={style.data}>
