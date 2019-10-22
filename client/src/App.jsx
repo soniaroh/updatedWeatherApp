@@ -45,29 +45,26 @@ export default class App extends React.Component {
     let query = this.state.cityToBeSearched;
     var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
       targetUrl = `https://www.metaweather.com/api/location/search/?query=${query}`;
-
+    let woeid;
     const that = this;
-    fetch(proxyUrl + targetUrl).then(response =>
-      response.json().then(data => ({
-        data: data,
-        status: response.status
+    fetch(proxyUrl + targetUrl)
+      .then(response => {
+        return response.json()
       })
-      ).then(res => {
-        let woeid = res.data[0].woeid;
-        fetch(proxyUrl + `https://www.metaweather.com/api/location/${woeid}`).then(response => {
-          response.json().then(data => ({
-            data: data,
-            status: response.status
-          })).then(res => {
-            that.setState({
-              forecast: res.data.consolidated_weather,
-              city: res.data.title,
-              isLoading: false
-            })
-
-          })
+      .then(res => {
+        woeid = res[0].woeid;
+        return fetch(proxyUrl + `https://www.metaweather.com/api/location/${woeid}`)
+      })
+      .then(response =>
+        response.json())
+      .then(res => {
+        that.setState({
+          forecast: res.consolidated_weather,
+          city: res.title,
+          isLoading: false
         })
-      })).catch(function (error) {
+      })
+      .catch(function (error) {
         console.log(error)
         alert('city is not found, please reload the page and try another city');
       });
