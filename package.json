@@ -82,7 +82,7 @@
     "jest": "^23.6.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
-    "webpack": "^2.7.0"
+    "webpack": "^5.75.0"
   },
   "proxy": "http://localhost:4000"
 }
